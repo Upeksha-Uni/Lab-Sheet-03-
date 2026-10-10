@@ -38,7 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
         typingEffect();
     }
 
-    // 2. Mobile Menu Toggle (HTML එකේ නැතිනම් errors නොඑන ලෙස safe කර ඇත)
     const menuBtn = document.getElementById('menu-btn');
     const navbar = document.getElementById('navbar');
 
@@ -95,12 +94,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 5. Contact Form Validation (HTML එකේ තිබූ id="form-message" එකට ගැළපෙන ලෙස සකසා ඇත)
     const form = document.getElementById('contact-form');
     const nameInput = document.getElementById('name');
     const emailInput = document.getElementById('email');
     const messageInput = document.getElementById('message');
-    const formMessage = document.getElementById('form-message'); // HTML එකේ ඇති නම
+    const formMessage = document.getElementById('form-message');
 
     if (form) {
         form.addEventListener('submit', (e) => {
@@ -148,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function setError(input, message) {
         const formGroup = input.parentElement;
-        // error দেখවීමට small tag එකක් නැතිනම් එය ස්වয়ංක්‍රීයව සකසා ගනී
+        
         let errorSmall = formGroup.querySelector('.error-msg');
         if (!errorSmall) {
             errorSmall = document.createElement('small');
